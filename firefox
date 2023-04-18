@@ -10,6 +10,8 @@ if [[ ! -d ~/.local/share/firefox ]] ; then
     wget "https://download.mozilla.org/?product=firefox-latest-ssl&os=${OS}" -O firefox.tar.bz2 2>&1
     tar -xf firefox.tar.bz2
     rm -f firefox.tar.bz2
+    mkdir -p ~/.local/share/distribution
+    cp -prf /opt/firefox-installer/policies.json ~/.local/share/distribution/
     cd "$curdir"
 fi
 exec ~/.local/share/firefox/firefox $@
