@@ -11,7 +11,7 @@ if [[ ! -d ~/.local/share/firefox ]] ; then
     tar -xf firefox.tar.bz2
     rm -f firefox.tar.bz2
     mkdir -p ~/.local/share/distribution
-    cp -prf /opt/firefox-installer/policies.json ~/.local/share/distribution/
+    cp -prf /opt/firefox-installer/policies.json ~/.local/share/firefox/distribution/
     cd "$curdir"
 fi
 exec ~/.local/share/firefox/firefox $@
